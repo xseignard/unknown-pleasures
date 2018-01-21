@@ -4,7 +4,7 @@ import dat from 'dat.gui/build/dat.gui';
 import './styles/index.css';
 
 const gui = new dat.GUI();
-const obj = { type: 'rounded' };
+const obj = { type: 'noisy' };
 
 const container = document.querySelector('.container');
 const paper = document.querySelector('#paper');
@@ -12,8 +12,8 @@ const paper = document.querySelector('#paper');
 const ctx = new C2S(800, 600);
 // const ctx = paper.getContext('2d');
 ctx.lineWidth = 0.1;
-ctx.fillStyle = '#fff';
-ctx.strokeStyle = '#000';
+ctx.fillStyle = '#000';
+ctx.strokeStyle = '#fff';
 
 const xOffset = { min: 200, max: 600 };
 const yOffset = { min: 100, max: 500 };
