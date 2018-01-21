@@ -140,6 +140,7 @@ var getY = function getY(type, y) {
 var draw = function draw() {
 	var x = xOffset.min;
 	var y = yOffset.min;
+	ctx.clearRect(0, 0, 800, 600);
 	ctx.fillRect(0, 0, 800, 600);
 	ctx.moveTo(x, y);
 	for (var i = 0; i < lines; i++) {
@@ -189,10 +190,10 @@ draw();
 
 var download = function download() {
 	var element = document.createElement('a');
+	document.body.appendChild(element);
 	element.setAttribute('href', 'data:image/svg+xml;charset=utf-8,' + ctx.getSerializedSvg());
 	element.setAttribute('download', 'harmonograph.svg');
 	element.style.display = 'none';
-	document.body.appendChild(element);
 	setTimeout(function () {
 		element.click();
 		setTimeout(function () {
@@ -212,6 +213,7 @@ gui.addColor(ctx, 'strokeStyle');
 
 window.addEventListener('keydown', function (e) {
 	if (e.keyCode === 82) draw();
+	if (e.keyCode === 68) download();
 });
 
 /***/ }),
