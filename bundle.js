@@ -83,7 +83,7 @@ __webpack_require__(3);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var gui = new _dat2.default.GUI();
-var obj = { type: 'rounded' };
+var obj = { type: 'noisy' };
 
 var container = document.querySelector('.container');
 var paper = document.querySelector('#paper');
@@ -91,8 +91,8 @@ var paper = document.querySelector('#paper');
 var ctx = new _canvas2svg2.default(800, 600);
 // const ctx = paper.getContext('2d');
 ctx.lineWidth = 0.1;
-ctx.fillStyle = '#fff';
-ctx.strokeStyle = '#000';
+ctx.fillStyle = '#000';
+ctx.strokeStyle = '#fff';
 
 var xOffset = { min: 200, max: 600 };
 var yOffset = { min: 100, max: 500 };
