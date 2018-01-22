@@ -11,7 +11,7 @@ const paper = document.querySelector('#paper');
 
 const ctx = new C2S(800, 600);
 // const ctx = paper.getContext('2d');
-ctx.lineWidth = 0.1;
+ctx.lineWidth = 0.25;
 ctx.fillStyle = '#000';
 ctx.strokeStyle = '#fff';
 
@@ -47,15 +47,6 @@ const normalPDF = (x, mu, sigma) => {
 	const numerator = Math.exp(-Math.pow(x - mu, 2) / (2 * sigma2));
 	const denominator = Math.sqrt(2 * Math.PI * sigma2);
 	return numerator / denominator;
-};
-
-const getY = (type, y) => {
-	switch (type) {
-		case 'rounded':
-			return;
-			break;
-		default:
-	}
 };
 
 const draw = () => {
