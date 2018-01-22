@@ -90,7 +90,7 @@ var paper = document.querySelector('#paper');
 
 var ctx = new _canvas2svg2.default(800, 600);
 // const ctx = paper.getContext('2d');
-ctx.lineWidth = 0.1;
+ctx.lineWidth = 0.25;
 ctx.fillStyle = '#000';
 ctx.strokeStyle = '#fff';
 
@@ -126,15 +126,6 @@ var normalPDF = function normalPDF(x, mu, sigma) {
 	var numerator = Math.exp(-Math.pow(x - mu, 2) / (2 * sigma2));
 	var denominator = Math.sqrt(2 * Math.PI * sigma2);
 	return numerator / denominator;
-};
-
-var getY = function getY(type, y) {
-	switch (type) {
-		case 'rounded':
-			return;
-			break;
-		default:
-	}
 };
 
 var draw = function draw() {
